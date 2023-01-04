@@ -1,0 +1,57 @@
+---
+title: "Data-Scientific Programming: Assignment 1"
+author: "Your Name"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+
+
+### Directions: Refer to [sections 3.1-3.6 in R for Data Science](https://r4ds.had.co.nz/data-visualisation.html), and the Section 1.1-1.2 Class Notes.
+
+We'll start by loading the tidyverse package. 
+
+```{r}
+library(tidyverse)
+```
+
+In this assignment, we will use the `mpg` dataset, referenced in the book. This dataset is automatically loaded with the `tidyverse` package. 
+
+## Question 1 
+
+### Create a scatterplot for the `mpg` dataset. Display `displ` on the x-axis and `hwy` on the y-axis. Add color to represent type of drive (`drv`), and size to represent the number of cylinders (`cyl`).
+
+```{r}
+# type code here
+```
+
+
+## Question 2
+
+### Modify the plot from question 1 to place the variable `class` (representing type of car) on the x-axis. Explain why a scatterplot is not an appropriate way to graph these data.   
+
+```{r}
+# type code here
+```
+
+Type explanation here. 
+
+## Question 3
+
+### Fix the code below so that the points are actually blue. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+```
+
+## Question 4
+
+### Now change the code from question 3 to color the points based on whether the car was released before 2004. Hint(see Exercise 3.3.1: question 6). 
+
+```{r}
+# type code here
+```
+
