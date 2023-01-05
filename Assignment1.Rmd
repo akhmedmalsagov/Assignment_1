@@ -1,6 +1,6 @@
 ---
 title: "Data-Scientific Programming: Assignment 1"
-author: "Your Name"
+author: "Akhmed Malsagov"
 output: pdf_document
 ---
 
@@ -24,7 +24,8 @@ In this assignment, we will use the `mpg` dataset, referenced in the book. This 
 ### Create a scatterplot for the `mpg` dataset. Display `displ` on the x-axis and `hwy` on the y-axis. Add color to represent type of drive (`drv`), and size to represent the number of cylinders (`cyl`).
 
 ```{r}
-# type code here
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = drv, size = cyl))
 ```
 
 
@@ -33,10 +34,12 @@ In this assignment, we will use the `mpg` dataset, referenced in the book. This 
 ### Modify the plot from question 1 to place the variable `class` (representing type of car) on the x-axis. Explain why a scatterplot is not an appropriate way to graph these data.   
 
 ```{r}
-# type code here
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = class, y = hwy, color = drv, size = cyl))
 ```
 
 Type explanation here. 
+Because some of the classes can use the same size of the engine, and it wouldn't show us the real picture of how fuel efficiancy changes between class of cars.
 
 ## Question 3
 
@@ -44,7 +47,7 @@ Type explanation here.
 
 ```{r}
 ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+  geom_point(mapping = aes(x = displ, y = hwy), color = "blue"))
 ```
 
 ## Question 4
@@ -52,7 +55,8 @@ ggplot(data = mpg) +
 ### Now change the code from question 3 to color the points based on whether the car was released before 2004. Hint(see Exercise 3.3.1: question 6). 
 
 ```{r}
-# type code here
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = "blue", color = year < 2004))
 ```
 
 
